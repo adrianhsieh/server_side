@@ -1,0 +1,39 @@
+#%RAML 0.8
+baseUri: http://mocksvc.mulesoft.com/mocks/091addbe-43d6-49b0-a987-156e8759e27a
+title: Safely Blue
+version: 0.0.1
+mediaType: application/json
+/devices:
+  get:
+      description: Get a list of devices given query paramaters.
+      queryParameters:
+        name:
+          type: string
+  /{deviceId}:
+    /positionreports:
+      post:
+        description: Create a position Report
+        body:
+          application/json:
+            example: |    
+                [
+                  {
+                    "longitude":1232.12122,
+                    "latitude":1232.12122,
+                    "altitiude":15,
+                    "accuracy":0.20,
+                    "datetimestamp": 1341533193
+                  }
+                ]
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+                  [
+                    {
+                      "status":"Success",
+                      "message":"Successfully Created"
+                    }
+                  ]
+
