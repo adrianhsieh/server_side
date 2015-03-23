@@ -1,6 +1,6 @@
 #%RAML 0.8
 baseUri: http://mocksvc.mulesoft.com/mocks/091addbe-43d6-49b0-a987-156e8759e27a
-title: Safely Blue
+title: waldo
 version: 0.0.1
 mediaType: application/json
 /devices:
@@ -36,4 +36,55 @@ mediaType: application/json
                       "message":"Successfully Created"
                     }
                   ]
-
+      get:
+        description: Get a list of position reports based on device id.
+        queryParameters:
+          fromDateTime:
+            type: date
+            required: false
+            example: 1990-11-05T08:15:30Z
+          toDateTime:
+            type: date
+            required: false
+            example: 2016-11-05T08:15:30Z
+        responses:
+          200:
+            body:
+              application/json:
+                example: |    
+                  [
+                    {
+                      "longitude":1232.12122,
+                      "latitude":1232.12122,
+                      "altitiude":15,
+                      "accuracy":0.20,
+                      "datetimestamp": 1341533193
+                    }
+                  ]
+    /summaryreports:
+      get:
+        description: Get Summary Report
+        queryParameters: 
+          reportType:
+            type: string
+            enum: [staticmap]
+            description: Type of report returned
+          fromDateTime:
+            type: date
+            required: false
+            example: 1990-11-05T08:15:30Z
+          toDateTime:
+            type: date
+            required: false
+            example: 2016-11-05T08:15:30Z
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+                  [
+                    {
+                      "type":"staticmap"
+                      "url":"https://maps.googleapis.com/maps/api/staticmap"
+                    }
+                  ]

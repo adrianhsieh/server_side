@@ -30,6 +30,7 @@
   <classpathentry kind="var" path="M2_REPO/org/mule/tools/devkit/mule-devkit-annotations/3.4.2/mule-devkit-annotations-3.4.2.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mule/modules/mule-module-apikit/1.6.1/mule-module-apikit-1.6.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mule/modules/mule-module-cors/1.2/mule-module-cors-1.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/1.0/objenesis-1.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/raml/raml-parser/0.8.11/raml-parser-0.8.11.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.7.5/slf4j-log4j12-1.7.5.jar"/>
